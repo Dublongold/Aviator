@@ -1,6 +1,6 @@
 package one.two.aviator.pages.fathers
 
-import android.Manifest;
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
@@ -32,7 +32,7 @@ abstract class WebViewPage : AppCompatActivity() {
     protected lateinit var webViewSettingsSetter: WebViewSettingsSetter
 
     @SuppressLint("SetJavaScriptEnabled")
-    protected fun sett() {
+    protected fun doNecessarySettings() {
         webViewSettingsSetter[WebViewSettingsSetter.ALLOWCONTENTACCESS]
         webViewSettingsSetter[WebViewSettingsSetter.ALLOWFILEACCESS]
         webViewSettingsSetter[WebViewSettingsSetter.JAVASCRIPTCANOPENWINDOWSAUTOMATICALLY]
@@ -233,6 +233,7 @@ abstract class WebViewPage : AppCompatActivity() {
             SetterForChooser.set(chooser, old, requestActivityResultSecond)
         }
 
+    @Suppress("UnusedReceiverParameter")
     private fun Uri?.setPhotoFile(): Uri? {
         val result = try {
             getTempFileUri()

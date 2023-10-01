@@ -33,7 +33,7 @@ class WebPage : WebViewPage() {
             Uri.fromFile(file)
         }
         webViewSettingsSetter = WebViewSettingsSetter(properties.wvView.settings)
-        sett()
+        doNecessarySettings()
         other()
         final()
     }
