@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF2B2B</color>
+    <color name="dark_silver">#FF2E2E2E</color>
+    <color name="light_silver">#FF5D5D5D</color>
+    <color name="dark_red_99">#99FF2A2A</color>
+    <color name="input_field_33">#33000000</color>
+    <color name="background">#FF171717</color>
+    <color name="transparent">#00000000</color>
+    <color name="green">#FF00AA00</color>
+    <color name="fly_away_background">#CC000000</color>
+</resources>

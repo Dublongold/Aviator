@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_2dp">2dp</dimen>
+    <dimen name="radius_5dp">5dp</dimen>
+    <dimen name="radius_8dp">8dp</dimen>
+    <dimen name="radius_16dp">16dp</dimen>
+    <dimen name="padding_6dp">6dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="width_1dp">1dp</dimen>
+    <dimen name="leaders_line_spacing">-9sp</dimen>
+</resources>

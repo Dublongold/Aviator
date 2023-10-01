@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/burger"
+        android:layout_width="24dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/burger"
+        android:background="@color/transparent"
+        tools:ignore="contentdescription" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/coins_background"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/burger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/burger">
+
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="14dp"
+            app:srcCompat="@drawable/coins_red"
+            tools:ignore="contentdescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/saira_medium"
+            android:text="@string/coins"
+            android:textSize="@dimen/small_size" />
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/saira_medium"
+            android:textSize="@dimen/normal_size"
+            tools:text="999999" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/plane_background"
+        tools:ignore="contentdescription" />
+
+    <TextView
+        android:id="@+id/gameWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/saira_semibold"
+        android:textSize="@dimen/huge_size"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        tools:text="0.0x" />
+
+    <ImageView
+        android:id="@+id/plane"
+        android:layout_width="126dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/plane_description"
+        android:rotation="-20"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5"
+        app:layout_constraintVertical_bias="0.8"
+        app:srcCompat="@drawable/plane" />
+
+    <ScrollView
+        android:id="@+id/actionPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/multipliers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/gray_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/zero_point_seven"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/red_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/two_point_four"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+
+                <TextView
+                    
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/dark_silver_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/three_point_five"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/gray_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/zero_point_nine"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/red_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/two_point_two"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/dark_silver_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/one_point_eight"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_marginHorizontal="3.5dp"
+                    android:background="@drawable/gray_multiplier"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="-0.03"
+                    android:padding="0dp"
+                    android:text="@string/zero_point_four"
+                    android:gravity="center"
+                    android:textSize="@dimen/small_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bet_panel"
+                
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/multipliers">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/placeABet"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    
+                    android:background="@drawable/selected_bet_option"
+                    android:enabled="false"
+                    android:fontFamily="@font/saira_semibold"
+                    android:letterSpacing="-0.04"
+                    android:text="@string/place_a_bet"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/above_normal_size" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/autoPlay"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_bet_option"
+                    android:fontFamily="@font/saira_medium"
+                    android:letterSpacing="-0.04"
+                    android:text="@string/auto_play"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/above_normal_size" />
+            </LinearLayout>
+
+            <TextView
+                android:tag="needSetTranslucent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira_medium"
+                android:letterSpacing="-0.04"
+                android:text="@string/choose_your_bet"
+                android:layout_marginBottom="4dp"
+                android:textSize="@dimen/small_size"
+                app:layout_constraintBottom_toTopOf="@+id/options"
+                app:layout_constraintStart_toStartOf="@+id/options" />
+            <TextView
+                android:tag="needSetTranslucent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/saira_medium"
+                android:letterSpacing="-0.04"
+                android:text="@string/auto_play"
+                android:layout_marginBottom="4dp"
+                android:textSize="@dimen/small_size"
+                app:layout_constraintBottom_toTopOf="@+id/options"
+                app:layout_constraintEnd_toEndOf="@+id/options" />
+
+
+            <LinearLayout
+                android:tag="needSetTranslucent"
+                android:id="@+id/options"
+                android:layout_width="match_parent"
+                android:layout_height="108dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="37dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+                android:baselineAligned="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/choose_bet_background"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="14dp">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/user_coins"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/currentBet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/above_normal_size"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+                        app:layout_constraintEnd_toStartOf="@+id/minusBet"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintTop_toTopOf="@+id/imageView6"
+                        tools:text="10" />
+
+                    <ImageButton
+                        android:id="@+id/minusBet"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/transparent"
+                        android:contentDescription="@string/minus"
+                        app:layout_constraintEnd_toStartOf="@+id/plusBet"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/minus_button" />
+
+                    <ImageButton
+                        android:id="@+id/plusBet"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@color/transparent"
+                        android:contentDescription="@string/plus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/plus_button" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/oneBet"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/one" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/fiveBet"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/five" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/tenBet"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/ten" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/fiftyBet"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/fifty" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/auto_play_background"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="14dp">
+
+                    <TextView
+                        android:id="@+id/currentMultiplier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/saira_medium"
+                        android:textSize="@dimen/big_size"
+                        app:layout_constraintBottom_toBottomOf="@+id/minusMultiplier"
+                        app:layout_constraintEnd_toStartOf="@+id/minusMultiplier"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/minusMultiplier"
+                        tools:text="0.0x" />
+
+                    <ImageButton
+                        android:id="@+id/minusMultiplier"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="4dp"
+                        android:background="@color/transparent"
+                        android:contentDescription="@string/minus"
+                        app:layout_constraintEnd_toStartOf="@+id/plusMultiplier"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/minus_button" />
+
+                    <ImageButton
+                        android:id="@+id/plusMultiplier"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@color/transparent"
+                        android:contentDescription="@string/plus"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/plus_button" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/reset"
+                            android:layout_width="68dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/reset" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/twoMultiplier"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/two" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/tenMultiplier"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_marginStart="4dp"
+                            android:background="@drawable/bet_button"
+                            android:text="@string/ten" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/placeYourBet"
+                android:tag="needSetTranslucent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/big_button_ripple"
+                android:text="@string/place_your_bet"
+                android:textAllCaps="false"
+                android:textSize="@dimen/big_size"
+                android:fontFamily="@font/saira_semibold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/options" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

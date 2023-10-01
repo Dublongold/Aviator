@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/red">
+    <item android:id="@android:id/mask">
+        <shape>
+            <corners android:radius="@dimen/radius_5dp"/>
+            <solid android:color="?android:colorAccent"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <stroke android:color="@color/red" android:width="@dimen/width_2dp"/>
+            <corners android:radius="@dimen/radius_5dp"/>
+            <solid android:color="@color/input_field_33"/>
+        </shape>
+    </item>
+</ripple>
